@@ -134,3 +134,4 @@ MonoBehaviour:
     type: 3}
   thingsThatCanBeInRooms:
   - {fileID: 1127548211529721256, guid: 4207a81cfd74a9844a0532a92d026bd8, type: 3}
+  - {fileID: 5118532242923161706, guid: 3f5e07508ac8ec04cada278ea3f058a2, type: 3}

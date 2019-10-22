@@ -79,13 +79,15 @@ public class TileMan : MonoBehaviour
 
         movement.SetAutoKill(false);
         Vector3 doorPos = transform.position;
-        doorPos.z -= 1;
+        doorPos.z -= 1.1f;
         Quaternion doorRot = transform.rotation;
 
         if (Random.Range(0, 6) + numberOfDoors > 4)
         {
             Instantiate(thingsThatCanBeInRooms[Random.Range(0, thingsThatCanBeInRooms.Count)], doorPos, doorRot, transform);
         }
+
+        doorPos.z += .1f;
 
         if (upDoor)
             Instantiate(upDoorSprite, doorPos, doorRot, transform);
