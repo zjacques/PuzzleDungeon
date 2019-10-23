@@ -11,6 +11,11 @@ public class AdventurerScript : MonoBehaviour
     Vector2 mouseEnd;
     Tween movement;
 
+    public int HP;
+    public int ATK;
+    public int DEF;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -119,4 +124,17 @@ public class AdventurerScript : MonoBehaviour
             });
         }
     }
+
+    //returns true if it has 0 HP
+    public bool Fight(int eATK)
+    {
+        if (eATK - DEF > 0)
+        {
+            HP -= (eATK - DEF);
+            if (HP <= 0)
+                return true;
+        }
+        return false;
+    }
+
 }
