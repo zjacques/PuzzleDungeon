@@ -1130,6 +1130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GPdisplay: {fileID: 1023979806}
+  HPdisplay: {fileID: 1838338456}
+  ATKdisplay: {fileID: 639941455}
+  DEFdisplay: {fileID: 491317236}
 --- !u!1 &1179172889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1392,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3094800337593080627, guid: 604edc0b1d7574c43b19734bcbbead03,
+        type: 3}
+      propertyPath: HP
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094800337593080627, guid: 604edc0b1d7574c43b19734bcbbead03,
+        type: 3}
+      propertyPath: ATK
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 604edc0b1d7574c43b19734bcbbead03, type: 3}
 --- !u!1 &1527476572
@@ -1645,7 +1658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 246.5, y: -0.025013}
+  m_AnchoredPosition: {x: 246.49998, y: -0.025016785}
   m_SizeDelta: {x: 379, y: 243.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838338456

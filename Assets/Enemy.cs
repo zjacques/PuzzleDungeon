@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Enemy : MonoBehaviour
 {
 
     public int HP;
     public int ATK;
     public int DEF;
+    public bool turning = false;
 
     //returns true if it has 0 HP
     public bool Fight(int eATK)
@@ -21,4 +23,10 @@ public class Enemy : MonoBehaviour
         return false;
     }
 
+    public virtual void Turn()
+    {
+
+    }
+
+    
 }

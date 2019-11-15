@@ -17,7 +17,7 @@ public class TileMan : MonoBehaviour
     bool trackMouse;
     Vector2 mouseStart;
     Vector2 mouseEnd;
-    Tween movement;
+    public Tween movement;
 
     #region Spawnables
     public List<GameObject> thingsThatCanBeInRooms;
@@ -76,6 +76,10 @@ public class TileMan : MonoBehaviour
                 }
             }
         }
+        upDoor = true;
+        leftDoor = true;
+        rightDoor = true;
+        downDoor = true;
 
         movement.SetAutoKill(false);
         Vector3 doorPos = transform.position;
@@ -89,13 +93,13 @@ public class TileMan : MonoBehaviour
 
         doorPos.z += .1f;
 
-        if (upDoor)
+        //if (upDoor)
             Instantiate(upDoorSprite, doorPos, doorRot, transform);
-        if (rightDoor)
+        //if (rightDoor)
             Instantiate(rightDoorSprite, doorPos, doorRot, transform);
-        if (downDoor)
+        //if (downDoor)
             Instantiate(downDoorSprite, doorPos, doorRot, transform);
-        if (leftDoor)
+        //if (leftDoor)
             Instantiate(leftDoorSprite, doorPos, doorRot, transform);
     }
 
