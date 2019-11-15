@@ -51,4 +51,10 @@ public class GridMan : MonoBehaviour
             successText.text = "You Win!";
         }
     }
+
+    void resetGame()
+    {
+
+    }
+
 }

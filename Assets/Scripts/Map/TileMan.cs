@@ -76,10 +76,16 @@ public class TileMan : MonoBehaviour
                 }
             }
         }
-        upDoor = true;
-        leftDoor = true;
-        rightDoor = true;
-        downDoor = true;
+        int plyrLayerMask = 1 << 9;
+        Collider2D thisRoom = Physics2D.OverlapPoint(transform.position, plyrLayerMask);
+        if (thisRoom != null)
+        {
+            upDoor = true;
+            leftDoor = true;
+            rightDoor = true;
+            downDoor = true;
+
+        }
 
         movement.SetAutoKill(false);
         Vector3 doorPos = transform.position;
@@ -93,13 +99,13 @@ public class TileMan : MonoBehaviour
 
         doorPos.z += .1f;
 
-        //if (upDoor)
+        if (upDoor)
             Instantiate(upDoorSprite, doorPos, doorRot, transform);
-        //if (rightDoor)
+        if (rightDoor)
             Instantiate(rightDoorSprite, doorPos, doorRot, transform);
-        //if (downDoor)
+        if (downDoor)
             Instantiate(downDoorSprite, doorPos, doorRot, transform);
-        //if (leftDoor)
+        if (leftDoor)
             Instantiate(leftDoorSprite, doorPos, doorRot, transform);
     }
 
